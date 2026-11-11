@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chariff Realty Group | Commercial Real Estate in Miami</title>
+<meta name="description" content="Chariff Realty Group: commercial property sales, retail leasing, investment opportunities and development sites across Miami and South Florida.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo-white.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero/h1.webp" fetchpriority="high">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Chariff Realty Group","url":"https://chariff.com/","telephone":"+1-305-576-7474","image":"assets/logo-white.webp",
+"address":{"@type":"PostalAddress","streetAddress":"3250 NE 1st Ave, Suite 321","addressLocality":"Miami","addressRegion":"FL","postalCode":"33137","addressCountry":"US"},
+"sameAs":["https://www.instagram.com/chariff/","https://twitter.com/chariff","https://www.facebook.com/chariffrealty","https://www.linkedin.com/company/chariff-realty-group"],
+"employee":[{"@type":"Person","name":"Lyle Chariff","jobTitle":"President/Broker","email":"lyle@chariff.com"},{"@type":"Person","name":"Mauricio Zapata","jobTitle":"Principal/Broker","email":"mauricio@chariff.com"},{"@type":"Person","name":"Jenna Cohen","jobTitle":"Realtor Associate","email":"jenna@chariff.com"}]}
+</script>
+<style>
+:root{
+  --bg:#0b0d0c; --bg2:#121614; --bg3:#1a1f1c; --line:rgba(255,255,255,.12);
+  --brand:#069b4e; --brand-d:#04773c; --accent:#f37532; --text:#f1f2ee; --muted:#a9b0aa;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Manrope",system-ui,sans-serif;
+  --gut:clamp(16px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{padding-inline:var(--gut);max-width:1440px;margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,64px)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--brand);font-weight:700;margin-bottom:14px;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:2px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s;font-family:var(--sans)}
+.btn-p{background:var(--brand);color:#fff}.btn-p:hover{background:#08b25a}
+.btn-g{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}.btn-g:hover{background:#fff;color:#000}
+.btn:focus-visible,a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,backdrop-filter .3s}
+header.solid{background:rgba(11,13,12,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px}
+.nav .logo img{width:54px;height:auto;transition:opacity .3s}
+header:not(.solid) .nav .logo img{opacity:0}
+.nav ul{display:flex;gap:30px;list-style:none}
+.nav ul a{text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#e8eae5;padding:12px 0}
+.nav ul a:hover{color:var(--brand)}
+.tools{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid var(--line);border-radius:2px}
+.lang button{min-width:44px;min-height:44px;background:none;border:0;color:var(--muted);font:700 12px var(--sans);letter-spacing:.1em;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fff;color:#000}
+.tel{font-weight:700;font-size:14px;text-decoration:none;display:flex;align-items:center;min-height:44px}
+.hero-stats>div{min-width:0}
+@media(max-width:600px){.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}.hero-stats span{font-size:10px;letter-spacing:.08em}.hero-in{padding-bottom:96px}}
+@media(max-width:960px){.nav ul{display:none}.tel span{display:none}.tel{width:44px;justify-content:center}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero .slides{position:absolute;inset:0;z-index:-2}
+.hero .slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.8s ease}
+.hero .slides img.on{opacity:1}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(11,13,12,.55) 0%,rgba(11,13,12,.25) 35%,rgba(11,13,12,.92) 100%)}
+.hero-in{padding-block:130px 72px;width:100%}
+.hero-logo{width:118px;height:auto;margin-bottom:34px;filter:drop-shadow(0 4px 18px rgba(0,0,0,.45))}
+.hero h1{font-size:clamp(40px,6.2vw,96px);max-width:17ch}
+.hero p.lead{max-width:56ch;margin-top:24px;font-size:clamp(16px,1.6vw,20px);color:#e4e7e1}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.hero-stats{display:flex;gap:clamp(20px,4vw,56px);flex-wrap:wrap;margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
+.hero-stats b{display:block;font:600 clamp(26px,3vw,40px) var(--serif)}
+.hero-stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* featured */
+.feat{background:var(--bg2);overflow:hidden}
+.feat-head{padding-block:96px 36px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.feat-head p{max-width:42ch;color:var(--muted)}
+.feat-track{display:flex;gap:28px;padding-inline:var(--gut);padding-bottom:96px;will-change:transform}
+.fcard{flex:0 0 min(78vw,760px);position:relative;display:block;text-decoration:none;color:inherit}
+.fcard .ph{aspect-ratio:16/11;overflow:hidden;background:var(--bg3)}
+.fcard img{width:100%;height:100%;object-fit:cover;transition:transform 1s ease}
+.fcard:hover img{transform:scale(1.04)}
+.fcard .meta{display:flex;justify-content:space-between;gap:20px;align-items:baseline;padding-top:18px;border-top:1px solid var(--line);margin-top:18px}
+.fcard h3{font-size:clamp(24px,2.6vw,34px)}
+.fcard .pr{font:600 clamp(24px,2.6vw,34px) var(--serif);color:var(--brand);white-space:nowrap}
+.fcard small{display:block;color:var(--muted);font-size:13px;margin-top:4px}
+.fcard .tag{position:absolute;top:16px;left:16px;background:var(--bg);color:#fff;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 12px}
+@media(max-width:899px){
+  .feat-track{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:64px}
+  .fcard{flex-basis:84vw;scroll-snap-align:center}
+  .fcard .meta{flex-direction:column;gap:6px}
+}
+
+/* catalog */
+.cat{padding-block:110px}
+.cat-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:34px}
+.cat-head p{max-width:46ch;color:var(--muted)}
+.bar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:16px 0;border-block:1px solid var(--line);margin-bottom:38px;position:sticky;top:84px;z-index:20;background:var(--bg)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:44px;padding:0 18px;background:none;border:1px solid var(--line);color:var(--text);font:600 13px var(--sans);cursor:pointer;border-radius:2px}
+.chip[aria-pressed=true]{background:var(--brand);border-color:var(--brand)}
+.bar label{display:flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.bar select{min-height:44px;background:var(--bg3);color:var(--text);border:1px solid var(--line);padding:0 12px;font:500 14px var(--sans);border-radius:2px;max-width:100%}
+.count{margin-left:auto;color:var(--muted);font-size:14px}
+@media(max-width:720px){.bar{position:static}.count{margin-left:0;width:100%}}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:28px}
+.card{grid-column:span 2;background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.card.big{grid-column:span 3}
+@media(max-width:1100px){.card,.card.big{grid-column:span 3}}
+@media(max-width:720px){.grid{grid-template-columns:1fr;gap:22px}.card,.card.big{grid-column:auto}}
+.car{position:relative;background:var(--bg3)}
+.car .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;aspect-ratio:4/3}
+.card.big .car .track{aspect-ratio:16/11}
+.car .track::-webkit-scrollbar{display:none}
+.car .track img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.car .arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(11,13,12,.72);color:#fff;font-size:20px;cursor:pointer;display:grid;place-items:center;opacity:0;transition:opacity .2s}
+.car:hover .arr,.car .arr:focus-visible{opacity:1}
+@media(hover:none){.car .arr{opacity:.9}}
+.car .prev{left:10px}.car .next{right:10px}
+.dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.45)}
+.dots i.on{background:#fff}
+.badge{position:absolute;top:12px;left:12px;z-index:2;background:var(--bg);font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px}
+.badge.sale{background:var(--brand)}
+.cb{padding:22px 22px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.price{font:600 clamp(28px,3vw,38px) var(--serif);color:#fff;line-height:1}
+.price small{font:600 12px var(--sans);letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-left:6px}
+.card h3{font-size:24px;line-height:1.12}
+.loc{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.spec{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 18px;padding:14px 0;border-block:1px solid var(--line);list-style:none}
+.spec li{font-size:13px;color:var(--muted)}
+.spec b{display:block;color:var(--text);font-size:15px;font-weight:600}
+.blurb{font-size:14px;color:#c9cec8}
+.acts{margin-top:auto;display:flex;flex-direction:column;gap:10px;padding-top:6px}
+.acts .btn{width:100%}
+.link2{text-align:center;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);text-decoration:underline;text-underline-offset:5px;min-height:44px;display:flex;align-items:center;justify-content:center}
+.link2:hover{color:var(--brand)}
+.empty{padding:60px 0;color:var(--muted);text-align:center;display:none}
+.note{margin-top:34px;color:var(--muted);font-size:13px}
+.note a{color:var(--text)}
+
+/* zones */
+.zones{background:var(--bg2);padding-block:110px}
+.zones-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:60px}
+@media(max-width:900px){.zones-grid{grid-template-columns:1fr;gap:30px}}
+.zrow{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);min-height:64px}
+.zrow a.n{font:600 clamp(24px,3vw,36px) var(--serif);text-decoration:none}
+.zrow a.n:hover{color:var(--brand)}
+.zrow button{background:none;border:1px solid var(--line);color:var(--muted);min-height:44px;padding:0 14px;font:600 12px var(--sans);letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border-radius:2px}
+.zrow button:hover{color:#fff;border-color:#fff}
+
+/* about */
+.about{padding-block:110px}
+.about-top{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:64px}
+@media(max-width:900px){.about-top{grid-template-columns:1fr;gap:26px}}
+.about-top p{color:#c9cec8;font-size:18px;max-width:52ch}
+.svc{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.svc span{border:1px solid var(--line);padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:.06em}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+@media(max-width:800px){.team{grid-template-columns:1fr}}
+.person{display:flex;gap:20px;align-items:center;padding:28px 24px 28px 0;border-bottom:1px solid var(--line)}
+.person img{width:104px;height:138px;object-fit:cover;flex:none;background:var(--bg3)}
+.person h3{font-size:28px}
+.person p{color:var(--brand);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:4px 0 10px}
+.person a{font-size:14px;color:var(--muted);text-decoration:none;word-break:break-all}
+.person a:hover{color:#fff}
+
+/* contact */
+.contact{background:var(--brand-d);padding-block:100px;position:relative}
+.contact-g{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:end}
+@media(max-width:900px){.contact-g{grid-template-columns:1fr;gap:34px}}
+.contact h2{font-size:clamp(40px,6.4vw,92px)}
+.contact .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.contact .btn-p{background:#fff;color:#04301a}.contact .btn-p:hover{background:#e8f5ed}
+.clist{list-style:none;display:grid;gap:18px}
+.clist li{border-top:1px solid rgba(255,255,255,.28);padding-top:14px;font-size:15px}
+.clist small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.75;font-weight:700;margin-bottom:2px}
+.clist a{text-decoration:none}.clist a:hover{text-decoration:underline}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{min-height:44px;display:inline-flex;align-items:center;padding:0 14px;border:1px solid rgba(255,255,255,.4);font-size:13px;font-weight:600}
+footer{padding:36px var(--gut) 100px;color:var(--muted);font-size:12px;max-width:1440px;margin:auto}
+footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+footer img{width:46px}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;gap:10px}
+.fab a{min-height:52px;min-width:52px;padding:0 20px;border-radius:30px;background:var(--brand);color:#fff;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,.45)}
+.fab a:hover{background:#08b25a}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}
+  .hero .slides img{transition:none}.fcard img{transition:none}
+}
+</style>
+</head>
+<body>
+<a class="sr" href="#catalog">Skip to listings</a>
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Chariff Realty Group"><img src="assets/logo-white.webp" alt="Chariff Realty Group logo" width="108" height="110"></a>
+    <ul>
+      <li><a href="#featured" data-i18n="nav_feat">Featured</a></li>
+      <li><a href="#catalog" data-i18n="nav_cat">Listings</a></li>
+      <li><a href="#zones" data-i18n="nav_zones">Neighborhoods</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="tools">
+      <a class="tel" href="tel:+13055767474" aria-label="Call (305) 576-7474"><span>(305) 576-7474</span><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-left:0"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.6 3.6a1 1 0 01-.25 1z"/></svg></a>
+      <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Chariff Realty Group">
+  <div class="slides" aria-hidden="true">
+    <img class="on" src="assets/hero/h1.webp" alt="" width="1920" height="1080" fetchpriority="high">
+    <img src="assets/hero/h2.webp" alt="" width="1920" height="1080">
+    <img src="assets/hero/h3.webp" alt="" width="1920" height="1080">
+  </div>
+  <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/logo-white.webp" alt="Chariff Realty Group" width="108" height="110">
+    <h1 data-i18n="hero_h1">Commercial real estate in Miami's core markets.</h1>
+    <p class="lead" data-i18n="hero_p">Commercial property sales, retail leasing, investment opportunities and development sites across South Florida. We answer our phone 24/7.</p>
+    <div class="ctas">
+      <a class="btn btn-p" href="tel:+13055767474" data-i18n="cta_call">Call (305) 576-7474</a>
+      <a class="btn btn-g" href="#catalog" data-i18n="cta_view">View listings</a>
+    </div>
+    <div class="hero-stats">
+      <div><b>30</b><span data-i18n="st_list">Listings shown</span></div>
+      <div><b>3</b><span data-i18n="st_team">Brokers &amp; agents</span></div>
+      <div><b>24/7</b><span data-i18n="st_phone">We answer our phone</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="feat" id="featured" aria-labelledby="feat-h">
+  <div class="wrap feat-head">
+    <div class="reveal"><span class="eyebrow" data-i18n="feat_eye">Featured</span><h2 id="feat-h" data-i18n="feat_h">Largest opportunities</h2></div>
+    <p class="reveal" data-i18n="feat_p">The highest-priced properties for sale, straight from the Chariff portfolio. Each one opens its original listing.</p>
+  </div>
+  <div class="feat-track" id="featTrack"></div>
+</section>
+
+<section class="cat wrap" id="catalog" aria-labelledby="cat-h">
+  <div class="cat-head">
+    <div class="reveal"><span class="eyebrow" data-i18n="cat_eye">Listings</span><h2 id="cat-h" data-i18n="cat_h">The portfolio, by price</h2></div>
+    <p class="reveal" data-i18n="cat_p">30 of the highest-priced listings, with photos, price and details taken from each original listing.</p>
+  </div>
+  <div class="bar">
+    <div class="chips" role="group" aria-label="Listing type">
+      <button class="chip" type="button" data-f="all" aria-pressed="true" data-i18n="f_all">All</button>
+      <button class="chip" type="button" data-f="sale" aria-pressed="false" data-i18n="f_sale">For sale</button>
+      <button class="chip" type="button" data-f="lease" aria-pressed="false" data-i18n="f_lease">For lease</button>
+    </div>
+    <label><span data-i18n="f_zone">Area</span><select id="zoneSel"></select></label>
+    <label><span data-i18n="f_sort">Sort</span><select id="sortSel"><option value="desc" data-i18n="s_desc">Price: high to low</option><option value="asc" data-i18n="s_asc">Price: low to high</option></select></label>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" data-i18n="empty">No listings match these filters.</p>
+  <p class="note" data-i18n-html="cat_note">Lease rates are shown as published on each listing. Sale and lease prices are ordered together by total value; listings marked Call Agent come last.</p>
+</section>
+
+<section class="zones" id="zones" aria-labelledby="z-h">
+  <div class="wrap zones-grid">
+    <div class="reveal"><span class="eyebrow" data-i18n="z_eye">Neighborhoods</span><h2 id="z-h" data-i18n="z_h">Where we work</h2><p style="color:var(--muted);margin-top:18px;max-width:40ch" data-i18n="z_p">Miami's core commercial corridors, from the Design District to Miami Beach.</p></div>
+    <div id="zoneRows" class="reveal"></div>
+  </div>
+</section>
+
+<section class="about wrap" id="about" aria-labelledby="a-h">
+  <div class="about-top">
+    <div class="reveal"><span class="eyebrow" data-i18n="a_eye">About</span><h2 id="a-h" data-i18n="a_h">A leading commercial brokerage.</h2></div>
+    <div class="reveal"><p data-i18n="a_p">Chariff Realty Group specializes in high-value commercial property sales, retail leasing, investment opportunities and development sites across South Florida, led by Lyle Chariff and Mauricio Zapata with a team of commercial agents.</p>
+      <div class="svc"><span data-i18n="sv1">Commercial Sales</span><span data-i18n="sv2">Commercial Leasing</span><span data-i18n="sv3">Residential Sales</span></div></div>
+  </div>
+  <div class="team reveal">
+    <div class="person"><img src="assets/team/lyle.webp" alt="Lyle Chariff" width="104" height="138" loading="lazy"><div><h3>Lyle Chariff</h3><p>President/Broker</p><a href="mailto:lyle@chariff.com">lyle@chariff.com</a></div></div>
+    <div class="person"><img src="assets/team/mauricio.webp" alt="Mauricio Zapata" width="104" height="138" loading="lazy"><div><h3>Mauricio Zapata</h3><p>Principal/Broker</p><a href="mailto:mauricio@chariff.com">mauricio@chariff.com</a></div></div>
+    <div class="person"><img src="assets/team/jenna.webp" alt="Jenna Cohen" width="104" height="138" loading="lazy"><div><h3>Jenna Cohen</h3><p>Realtor Associate</p><a href="mailto:jenna@chariff.com">jenna@chariff.com</a></div></div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="c-h">
+  <div class="wrap contact-g">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#fff;opacity:.8" data-i18n="c_eye">Contact</span>
+      <h2 id="c-h" data-i18n="c_h">Let's cut to the chase.</h2>
+      <div class="ctas">
+        <a class="btn btn-p" href="tel:+13055767474" data-i18n="cta_call">Call (305) 576-7474</a>
+        <a class="btn btn-g" href="mailto:lyle@chariff.com?cc=mauricio@chariff.com" data-i18n="cta_email">Send an email</a>
+      </div>
+    </div>
+    <ul class="clist reveal">
+      <li><small data-i18n="c_phone">Phone</small><a href="tel:+13055767474">(305) 576-7474</a> &middot; <a href="tel:+13055767494">(305) 576-7494</a></li>
+      <li><small data-i18n="c_addr">Office</small><a href="https://www.google.com/maps/search/?api=1&amp;query=3250+NE+1st+Ave+Suite+321+Miami+FL+33137" target="_blank" rel="noopener">3250 NE 1st Ave, Suite 321<br>Miami, FL 33137</a></li>
+      <li><small data-i18n="c_social">Social</small><div class="socials"><a href="https://www.instagram.com/chariff/" target="_blank" rel="noopener">Instagram</a><a href="https://twitter.com/chariff" target="_blank" rel="noopener">X / Twitter</a><a href="https://www.facebook.com/chariffrealty" target="_blank" rel="noopener">Facebook</a><a href="https://www.linkedin.com/company/chariff-realty-group" target="_blank" rel="noopener">LinkedIn</a></div></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="row"><img src="assets/logo-white.webp" alt="Chariff Realty Group" width="46" height="47" loading="lazy"><span>&copy; 2026 Chariff Realty Group, Inc.</span><a href="https://chariff.com/" target="_blank" rel="noopener" data-i18n="f_orig">Original site: chariff.com</a></div>
+  <p data-i18n="f_disc">All property data has been obtained from sources believed reliable. Chariff Realty Group, Inc. has not verified it and makes no guarantee, warranty or representation about it. Any reference to age or square footage must be verified and is not guaranteed.</p>
+</footer>
+
+<div class="fab"><a href="tel:+13055767474" aria-label="Call (305) 576-7474"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.6 3.6a1 1 0 01-.25 1z"/></svg><span data-i18n="fab">Call now</span></a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const DATA = [{"id":"883","name":"6700 NE 2nd Ct - Little River Flex Portfolio","addr":"6700 NE 2nd Ct - Portfolio","city":"Miami, FL 33138","zone":"Little River","sale":true,"type":"Office/Warehouse","price":"$16,950,000","lease":null,"size":"29,186 Sqft","sizeLabel":"Building area","lot":null,"zoning":"D2","bldg":null,"blurb":"Four newly built flex buildings in Little River, each with 30′ clear ceilings and full HVAC. Available individually or as a $16,950,000 portfolio.","n":5,"url":"https://chariff.com/properties/883-Office-Warehouse-6700-NE-2nd-Ct-Portfolio-Miami-FL-33138-USD16-950-000/","key":16950000.0},{"id":"419","name":"301 NW 36th St - Midtown","addr":"301 NW 36th St","city":"Miami, FL 33127","zone":"Midtown","sale":true,"type":"Investment","price":"$14,900,000","lease":null,"size":"21,785 Sqft","sizeLabel":"Building area","lot":"47,185 Sqft","zoning":"T6-8-O","bldg":null,"blurb":"21,785 SF building on over an acre of land within the Wynwood Norte NRD-2 Overlay, zoned T6-8-O.","n":5,"url":"https://chariff.com/properties/419-Investment-301-NW-36th-St-Miami-FL-33127-USD14-900-000/","key":14900000.0},{"id":"1041","name":"7610 Biscayne Blvd","addr":"7610 Biscayne Blvd","city":"Miami, FL 33138","zone":"MiMo","sale":true,"type":"Special Purpose","price":"$12,000,000","lease":null,"size":"14,139 Sqft","sizeLabel":"Building area","lot":"13,762 Sqft","zoning":"T6-8-O","bldg":null,"blurb":"14,139 SF two-story historic building, completely renovated in 2025, at the corner of Biscayne Blvd and NE 76th St in the MiMo Biscayne Boulevard Historic District.","n":5,"url":"https://chariff.com/properties/1041-Special-Purpose-7610-Biscayne-Blvd-Miami-FL-33138-USD12-000-000/","key":12000000.0},{"id":"375","name":"1040 Biscayne Blvd - Office","addr":"1040 Biscayne Blvd","city":"Miami, FL 33132","zone":"Downtown Miami","sale":true,"type":"Office","price":"$8,000,000","lease":null,"size":"20,313 Sqft","sizeLabel":"Building area","lot":null,"zoning":null,"bldg":"Ten Museum Park","blurb":"Office spaces at Ten Museum Park, a mixed-use building in Downtown Miami. The 200 residential units are not part of this offering.","n":5,"url":"https://chariff.com/properties/375-Office-1040-Biscayne-Blvd-Miami-FL-33132-USD8-000-000/","key":8000000.0},{"id":"374","name":"1040 Biscayne Blvd - Retail","addr":"1040 Biscayne Blvd","city":"Miami, FL 33132","zone":"Downtown Miami","sale":true,"type":"Retail","price":"$7,000,000","lease":null,"size":"11,597 Sqft","sizeLabel":"Building area","lot":null,"zoning":null,"bldg":"Ten Museum Park","blurb":"Ground-floor retail spaces at Ten Museum Park, a mixed-use building in Downtown Miami. The 200 residential units are not part of this offering.","n":5,"url":"https://chariff.com/properties/374-Retail-1040-Biscayne-Blvd-Miami-FL-33132-USD7-000-000/","key":7000000.0},{"id":"1039","name":"228 89th St","addr":"228 89th St","city":"Surfside, FL 33154","zone":"Surfside","sale":true,"type":"Development Site","price":"$4,750,000","lease":null,"size":"4,244 Sqft","sizeLabel":"Building area","lot":"12,736 Sqft","zoning":"H30C","bldg":null,"blurb":"Rare Surfside corner site on Harding Avenue (A1A), one block to the beach, with 110.75± ft of frontage.","n":5,"url":"https://chariff.com/properties/1039-Development-Site-228-89th-St-Surfside-FL-33154-USD4-750-000/","key":4750000.0},{"id":"455","name":"1620 NE 148th St - Oak Plaza","addr":"1620 NE 148th St","city":"Miami, FL 33181","zone":"Miami","sale":true,"type":"Investment","price":"$3,600,000","lease":null,"size":"15,604 Sqft","sizeLabel":"Building area","lot":"36,168 Sqft","zoning":"BU-1","bldg":"Oak Plaza","blurb":"15-unit micro retail shopping center along W Dixie Highway with value-add potential.","n":5,"url":"https://chariff.com/properties/455-Investment-1620-NE-148th-St-Miami-FL-33181-USD3-600-000/","key":3600000.0},{"id":"846","name":"1975 71st Street - Miami Beach","addr":"1975 71st Street","city":"Miami Beach, FL 33141","zone":"Miami Beach","sale":true,"type":"Retail/Office","price":"$1,599,000","lease":null,"size":"1,950 Sqft","sizeLabel":"Building area","lot":null,"zoning":"CD-1","bldg":null,"blurb":"Freestanding commercial building on the 71st Street corridor, configured as two 975 SF± retail units or one 1,950 SF± space.","n":5,"url":"https://chariff.com/properties/846-Retail-Office-1975-71st-Street-Miami-Beach-FL-33141-USD1-599-000/","key":1599000.0},{"id":"425","name":"3701 NW 3rd Ave - Midtown","addr":"3701 NW 3rd Ave","city":"Miami, FL 33127","zone":"Midtown","sale":true,"type":"Development Site","price":"$1,400,000","lease":null,"size":null,"sizeLabel":"Building area","lot":"6,784 Sqft","zoning":"T5-O","bldg":null,"blurb":"Within the Wynwood Norte NRD-2 Overlay. Seller financing available; approx. 27 buildable units allowed.","n":5,"url":"https://chariff.com/properties/425-Development-Site-3701-NW-3rd-Ave-Miami-FL-33127-USD1-400-000/","key":1400000.0},{"id":"430","name":"Little Havana - Development Site","addr":"Little Havana","city":"Miami, FL 33135","zone":"Little Havana","sale":true,"type":"Development Site","price":"$1,400,000","lease":null,"size":null,"sizeLabel":"Building area","lot":"7,500 Sqft","zoning":"T6-8-0","bldg":null,"blurb":"Transit Oriented Development (TOD) site in the Little Havana NET Area; approx. 26 residential units allowed.","n":4,"url":"https://chariff.com/properties/430-Development-Site-Little-Havana-Miami-FL-33135-USD1-400-000/","key":1400000.0},{"id":"490","name":"1101 NW 25th St","addr":"1101 NW 25th St","city":"Miami, FL","zone":"Allapattah","sale":true,"type":"Development Site","price":"$325,000","lease":null,"size":null,"sizeLabel":"Building area","lot":"5,000 Sqft","zoning":"T3-O","bldg":null,"blurb":"Corner lot in Allapattah, two blocks north of the Rubell Museum. Ideal for a short term rental geared development.","n":4,"url":"https://chariff.com/properties/490-Development-Site-1101-NW-25th-St-Miami-FL-USD325-000/","key":325000.0},{"id":"1062","name":"Amor Di Pasta Restaurant","addr":"2320 NE 2nd Ave","city":"Miami, FL 33137","zone":"Edgewater","sale":true,"type":"Restaurant","price":"$150,000","lease":null,"size":"2,178 Sqft","sizeLabel":"Building area","lot":null,"zoning":null,"bldg":null,"blurb":"Fully built restaurant in Edgewater with kitchen equipment, hood and grease trap in place. This is a business sale; the real estate is not included.","n":5,"url":"https://chariff.com/properties/1062-Restaurant-2320-NE-2nd-Ave-Miami-FL-33137-USD150-000/","key":150000.0},{"id":"547","name":"Legacy on Biscayne Bay - 8011-8041 NE Bayshore Ct","addr":"8011-8041 NE Bayshore Ct","city":"Miami, FL 33138","zone":"Miami","sale":true,"type":"Development Site","price":"Call Agent","lease":null,"size":null,"sizeLabel":"Building area","lot":"24,720 Sqft","zoning":"T6-8-L","bldg":null,"blurb":"164± ft of direct Biscayne Bay frontage on a ±0.57-acre private waterfront site, improved with four existing waterfront residences.","n":5,"url":"https://chariff.com/properties/547-Development-Site-8011-8041-NE-Bayshore-Ct-Miami-FL-33138-Call-Agent/","key":-1},{"id":"256","name":"4900 NE 2nd Ave","addr":"4900 NE 2nd Ave","city":"Miami, FL 33137","zone":"Buena Vista","sale":false,"type":"Retail/Office","price":"$100","lease":"SF/NNN","size":"7,500 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T4-L","bldg":null,"blurb":"Freestanding corner building at the entrance to the Miami Design District; ideal for creative office, retail or medical use.","n":5,"url":"https://chariff.com/properties/256-Retail-Office-4900-NE-2nd-Ave-Miami-FL-33137-USD100/","key":750000.0},{"id":"448","name":"536 Lincoln Road - South Beach","addr":"536 Lincoln Road","city":"Miami Beach, FL 33139","zone":"Miami Beach","sale":false,"type":"Retail","price":"$185","lease":null,"size":"3,564 Sqft","sizeLabel":"Total available","lot":null,"zoning":"CD-3","bldg":null,"blurb":"Exclusive retail space at 536 Lincoln Road with floor to ceiling storefront for maximum exposure.","n":5,"url":"https://chariff.com/properties/448-Retail-536-Lincoln-Road-Miami-Beach-FL-33139-USD185/","key":659340.0},{"id":"498","name":"3050 Biscayne Blvd","addr":"3050 Biscayne Blvd","city":"Miami, FL 33137","zone":"Edgewater","sale":false,"type":"Office","price":"$51-55","lease":"SF/Modified Gross","size":"7,921 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-36A-O","bldg":null,"blurb":"Turn-key offices with expansive views and prominent frontage on Biscayne Boulevard in Edgewater.","n":5,"url":"https://chariff.com/properties/498-Office-3050-Biscayne-Blvd-Miami-FL-33137-USD51/","key":403971.0},{"id":"489","name":"5084 Biscayne Blvd","addr":"5084 Biscayne Blvd","city":"Miami, FL 33137","zone":"MiMo","sale":false,"type":"Retail/Office","price":"$50","lease":"SF/Modified Gross","size":"6,900 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-8-O","bldg":null,"blurb":"Approx. 6,900 SF showroom at Colony Shops on Biscayne Boulevard, minutes from the Miami Design District.","n":5,"url":"https://chariff.com/properties/489-Retail-Office-5084-Biscayne-Blvd-Miami-FL-33137-USD50/","key":345000.0},{"id":"359","name":"5700 Biscayne Blvd - MiMo District","addr":"5700 Biscayne Blvd","city":"Miami, FL 33137","zone":"MiMo","sale":false,"type":"Retail","price":"$49","lease":"SF/NNN","size":"6,962 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-8-O","bldg":"The Boulevard","blurb":"Retail at The Boulevard @ MiMo with direct frontage on Biscayne Boulevard / US-1, within a 284-unit mixed-use residential building.","n":5,"url":"https://chariff.com/properties/359-Retail-5700-Biscayne-Blvd-Miami-FL-33137-USD49/","key":341138.0},{"id":"939","name":"235 NE 67th St","addr":"235 NE 67th St","city":"Miami, FL 33138","zone":"Little River","sale":false,"type":"Flex","price":"$38","lease":"SF/NNN","size":"7,302 Sqft","sizeLabel":"Total available","lot":null,"zoning":"D2","bldg":null,"blurb":"LR#235 – 235 NE 67th St is a newly built flex building with 30′ clear ceilings, full HVAC, and a finished office buildout with elevator access.","n":5,"url":"https://chariff.com/properties/939-Flex-235-NE-67th-St-Miami-FL-33138-USD38/","key":277476.0},{"id":"459","name":"3500 NW 15th Ave - Freestanding Bldg.","addr":"3500 NW 15th Ave","city":"Miami, FL 33142","zone":"Allapattah","sale":false,"type":"Retail","price":"$16.65","lease":"SF/NNN","size":"14,389 Sqft","sizeLabel":"Total available","lot":"30,853 Sqft","zoning":"T5-L","bldg":null,"blurb":"Space with 12 ft high ceilings, ample parking and a drive in door, blocks from the Metro Rail station.","n":5,"url":"https://chariff.com/properties/459-Retail-3500-NW-15th-Ave-Miami-FL-33142-USD1665/","key":239576.84999999998},{"id":"942","name":"6700 NE 2nd Ct","addr":"6700 NE 2nd Ct","city":"Miami, FL 33138","zone":"Little River","sale":false,"type":"Flex","price":"$38","lease":"SF/NNN","size":"6,220 Sqft","sizeLabel":"Total available","lot":null,"zoning":"D2","bldg":null,"blurb":"LR#6700 – 6700 NE 2nd Ct is a newly built flex building with 30’ clear ceilings, full HVAC, and real office/mezzanine space.","n":5,"url":"https://chariff.com/properties/942-Flex-6700-NE-2nd-Ct-Miami-FL-33138-USD38/","key":236360.0},{"id":"495","name":"5999 Biscayne Blvd","addr":"5999 Biscayne Blvd","city":"Miami, FL 33137","zone":"MiMo","sale":false,"type":"Retail/Office","price":"$39","lease":"SF/NNN","size":"6,055 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T4-O","bldg":null,"blurb":"5999 Biscayne Blvd is a rare freestanding commercial opportunity on Biscayne Boulevard, offering the visibility, identity, and flexibility today’s tenants struggle to find.","n":5,"url":"https://chariff.com/properties/495-Retail-Office-5999-Biscayne-Blvd-Miami-FL-33137-USD39/","key":236145.0},{"id":"468","name":"6101 Biscayne Blvd - Retail Spaces","addr":"6101 Biscayne Blvd","city":"Miami, FL 33137","zone":"MiMo","sale":false,"type":"Retail","price":"$49","lease":"SF/NNN","size":"4,818 Sqft","sizeLabel":"Total available","lot":null,"zoning":null,"bldg":null,"blurb":"Retail spaces in a MiMo landmark originally designed by architect D.B. Lewis, with floor-to-ceiling glass storefronts on Biscayne Boulevard.","n":5,"url":"https://chariff.com/properties/468-Retail-6101-Biscayne-Blvd-Miami-FL-33137-USD49/","key":236082.0},{"id":"550","name":"286 NE 39th St","addr":"286 NE 39th St","city":"Miami, FL 33137","zone":"Miami Design District","sale":false,"type":"Retail","price":"$110","lease":"SF/NNN","size":"2,092 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-12L","bldg":null,"blurb":"Freestanding ±2,092 SF space at the entrance to the Miami Design District, with its own address and signage.","n":5,"url":"https://chariff.com/properties/550-Retail-286-NE-39th-St-Miami-FL-33137-USD110/","key":230120.0},{"id":"429","name":"350 NE 75th St - Creative Office","addr":"350 NE 75th St","city":"Miami, FL 33138","zone":"Little River","sale":false,"type":"Office","price":"$25-20","lease":"SF/Modified Gross","size":"8,272 Sqft","sizeLabel":"Total available","lot":null,"zoning":"D2","bldg":null,"blurb":"Turn key, fully built out office spaces with on-site parking and 14 ft high ceilings.","n":5,"url":"https://chariff.com/properties/429-Office-350-NE-75th-St-Miami-FL-33138-USD25/","key":206800.0},{"id":"434","name":"1731 N Miami Ave","addr":"1731 N Miami Ave","city":"Miami, FL 33136","zone":"Downtown Miami","sale":false,"type":"Retail","price":"$45","lease":"SF/NNN","size":"4,500 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-24A-O","bldg":null,"blurb":"1731 N Miami Ave, Miami, FL 33136 is a prime commercial property in Downtown Miami, offering 4,500 square feet of commercial space with a street-level entrance.","n":5,"url":"https://chariff.com/properties/434-Retail-1731-N-Miami-Ave-Miami-FL-33136-USD45/","key":202500.0},{"id":"809","name":"1500 NW 36th St","addr":"1500 NW 36th St","city":"Miami, FL 33142","zone":"Allapattah","sale":false,"type":"Retail/Office","price":"$20","lease":"SF/NNN","size":"8,636 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T6-8-O","bldg":null,"blurb":"Turnkey retail or office space available for immediate occupancy along NW 36th Street, one of the area’s highest-traffic corridors at 18,000+ vehicles daily.","n":5,"url":"https://chariff.com/properties/809-Retail-Office-1500-NW-36th-St-Miami-FL-33142-USD20/","key":172720.0},{"id":"492","name":"132 NW 12th St - Vacant Land","addr":"132 NW 12th St","city":"Miami, FL 33136","zone":"Downtown Miami","sale":false,"type":"Development Site","price":"$12,000","lease":"Monthly","size":"98,500 Sqft","sizeLabel":"Total available","lot":null,"zoning":"T5-L/T6-8-O","bldg":null,"blurb":"132 NW 12th St presents a rare opportunity to lease up to 98,500 SF ± of vacant land across two distinct parcels in Miami’s urban core.","n":5,"url":"https://chariff.com/properties/492-Development-Site-132-NW-12th-St-Miami-FL-33136-USD12-000/","key":144000.0},{"id":"451","name":"1040 Biscayne Blvd","addr":"1040 Biscayne Blvd - M1","city":"Miami, FL 33132","zone":"Downtown Miami","sale":false,"type":"Office","price":"$29","lease":null,"size":"3,795 Sqft","sizeLabel":"Total available","lot":null,"zoning":null,"bldg":null,"blurb":"Office Suite M1 inside Ten Museum Park, with floor-to-ceiling windows in Downtown Miami.","n":5,"url":"https://chariff.com/properties/451-Office-1040-Biscayne-Blvd-M1-Miami-FL-33132-USD29/","key":110055.0},{"id":"496","name":"2829 NW 13th Ave - Allapattah","addr":"2829 NW 13th Ave","city":"Miami, FL 33142","zone":"Allapattah","sale":false,"type":"Office/Retail","price":"$24","lease":null,"size":"3,300 Sqft","sizeLabel":"Total available","lot":null,"zoning":null,"bldg":null,"blurb":"Turn key retail/office spaces in vanilla shell condition with polished concrete floors; on-site and street parking.","n":5,"url":"https://chariff.com/properties/496-Office-Retail-2829-NW-13th-Ave-Miami-FL-33142-USD24/","key":79200.0}];
+const I18N = {
+ en:{nav_feat:"Featured",nav_cat:"Listings",nav_zones:"Neighborhoods",nav_about:"About",nav_contact:"Contact",
+  hero_h1:"Commercial real estate in Miami's core markets.",hero_p:"Commercial property sales, retail leasing, investment opportunities and development sites across South Florida. We answer our phone 24/7.",
+  cta_call:"Call (305) 576-7474",cta_view:"View listings",cta_email:"Send an email",st_list:"Listings shown",st_team:"Brokers & agents",st_phone:"We answer our phone",
+  feat_eye:"Featured",feat_h:"Largest opportunities",feat_p:"The highest-priced properties for sale, straight from the Chariff portfolio. Each one opens its original listing.",
+  cat_eye:"Listings",cat_h:"The portfolio, by price",cat_p:"30 of the highest-priced listings, with photos, price and details taken from each original listing.",
+  f_all:"All",f_sale:"For sale",f_lease:"For lease",f_zone:"Area",f_sort:"Sort",s_desc:"Price: high to low",s_asc:"Price: low to high",empty:"No listings match these filters.",
+  cat_note:"Lease rates are shown as published on each listing. Sale and lease prices are ordered together by total value; listings marked Call Agent come last.",
+  z_eye:"Neighborhoods",z_h:"Where we work",z_p:"Miami's core commercial corridors, from the Design District to Miami Beach.",
+  a_eye:"About",a_h:"A leading commercial brokerage.",a_p:"Chariff Realty Group specializes in high-value commercial property sales, retail leasing, investment opportunities and development sites across South Florida, led by Lyle Chariff and Mauricio Zapata with a team of commercial agents.",
+  sv1:"Commercial Sales",sv2:"Commercial Leasing",sv3:"Residential Sales",
+  c_eye:"Contact",c_h:"Let's cut to the chase.",c_phone:"Phone",c_addr:"Office",c_social:"Social",
+  f_orig:"Original site: chariff.com",f_disc:"All property data has been obtained from sources believed reliable. Chariff Realty Group, Inc. has not verified it and makes no guarantee, warranty or representation about it. Any reference to age or square footage must be verified and is not guaranteed.",fab:"Call now",
+  forSale:"For sale",forLease:"For lease",inquire:"Inquire by email",view:"View full listing",size:"Size",lot:"Lot",zoning:"Zoning",type:"Type",bldg:"Building",
+  listings:"listings",listing:"listing",show:"Showing",allAreas:"All areas",prev:"Previous photo",next:"Next photo",photo:"Photo",
+  mail_s:"Inquiry: ",mail_b:(n,a)=>`Hello, I'm interested in ${n} (${a}). Could you share more information?`,filterZ:"Filter listings",monthly:"Monthly",
+  types:{}},
+ es:{nav_feat:"Destacadas",nav_cat:"Propiedades",nav_zones:"Barrios",nav_about:"Nosotros",nav_contact:"Contacto",
+  hero_h1:"Bienes raíces comerciales en los mercados centrales de Miami.",hero_p:"Venta de propiedades comerciales, arriendo de locales, oportunidades de inversión y terrenos de desarrollo en el sur de Florida. Contestamos el teléfono 24/7.",
+  cta_call:"Llamar al (305) 576-7474",cta_view:"Ver propiedades",cta_email:"Enviar un correo",st_list:"Propiedades mostradas",st_team:"Brokers y agentes",st_phone:"Contestamos el teléfono",
+  feat_eye:"Destacadas",feat_h:"Las mayores oportunidades",feat_p:"Las propiedades en venta de mayor precio del portafolio de Chariff. Cada una abre su ficha original.",
+  cat_eye:"Propiedades",cat_h:"El portafolio, por precio",cat_p:"30 de las propiedades de mayor precio, con fotos, precio y detalles tomados de cada ficha original.",
+  f_all:"Todas",f_sale:"En venta",f_lease:"En arriendo",f_zone:"Zona",f_sort:"Orden",s_desc:"Precio: de mayor a menor",s_asc:"Precio: de menor a mayor",empty:"Ninguna propiedad coincide con estos filtros.",
+  cat_note:"Los valores de arriendo se muestran tal como se publican en cada ficha. Las propiedades en venta y en arriendo se ordenan juntas por valor total; las marcadas Call Agent van al final.",
+  z_eye:"Barrios",z_h:"Dónde trabajamos",z_p:"Los corredores comerciales centrales de Miami, del Design District a Miami Beach.",
+  a_eye:"Nosotros",a_h:"Una corredora comercial líder.",a_p:"Chariff Realty Group se especializa en venta de propiedades comerciales de alto valor, arriendo de locales, oportunidades de inversión y terrenos de desarrollo en el sur de Florida, liderada por Lyle Chariff y Mauricio Zapata junto a un equipo de agentes comerciales.",
+  sv1:"Ventas comerciales",sv2:"Arriendos comerciales",sv3:"Ventas residenciales",
+  c_eye:"Contacto",c_h:"Vamos directo al grano.",c_phone:"Teléfono",c_addr:"Oficina",c_social:"Redes",
+  f_orig:"Sitio original: chariff.com",f_disc:"Todos los datos de las propiedades provienen de fuentes consideradas confiables. Chariff Realty Group, Inc. no los ha verificado ni ofrece garantía alguna sobre ellos. Cualquier referencia a antigüedad o superficie debe verificarse y no está garantizada.",fab:"Llamar",
+  forSale:"En venta",forLease:"En arriendo",inquire:"Consultar por correo",view:"Ver ficha completa",size:"Tamaño",lot:"Terreno",zoning:"Zonificación",type:"Tipo",bldg:"Edificio",
+  listings:"propiedades",listing:"propiedad",show:"Mostrando",allAreas:"Todas las zonas",prev:"Foto anterior",next:"Foto siguiente",photo:"Foto",
+  mail_s:"Consulta: ",mail_b:(n,a)=>`Hola, me interesa ${n} (${a}). ¿Podrían compartir más información?`,filterZ:"Filtrar propiedades",monthly:"Mensual",
+  types:{"Office":"Oficina","Retail":"Comercial","Restaurant":"Restaurante","Development Site":"Terreno de desarrollo","Special Purpose":"Uso especial","Investment":"Inversión","Retail/Office":"Comercial/Oficina","Office/Retail":"Oficina/Comercial","Office/Warehouse":"Oficina/Bodega","Flex":"Flex","Warehouse":"Bodega"}}
+};
+const ZONES=["Miami Design District","Wynwood","MiMo","Midtown","Edgewater","Allapattah","Little River","Brickell","Downtown Miami","Miami Beach"];
+let lang="en"; try{const s=localStorage.getItem("chariff_lang"); if(s==="es"||s==="en") lang=s;}catch(e){}
+const T=k=>I18N[lang][k]??I18N.en[k]??k;
+const state={f:"all",zone:"all",sort:"desc"};
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MAIL="lyle@chariff.com", CC="mauricio@chariff.com";
+
+function priceHTML(p){
+  let extra=p.lease?(p.lease==="Monthly"?T("monthly"):p.lease):"";
+  return esc(p.price)+(extra?`<small>${esc(extra)}</small>`:"");
+}
+function typeName(p){return (lang==="es"&&I18N.es.types[p.type])||p.type}
+function imgs(p){return Array.from({length:p.n},(_,i)=>`assets/p/${p.id}-${i+1}.webp`)}
+function mail(p){return `mailto:${MAIL}?cc=${CC}&subject=${encodeURIComponent(T("mail_s")+p.name)}&body=${encodeURIComponent(T("mail_b")(p.name,p.addr+", "+p.city))}`}
+function sorted(list){
+  const a=[...list].sort((x,y)=>y.key-x.key);
+  return state.sort==="asc"?a.reverse():a;
+}
+function cardHTML(p,i){
+  const im=imgs(p);
+  const eager=i<6;
+  const slides=im.map((s,k)=>`<img src="${s}" alt="${esc(p.name)} - ${T("photo")} ${k+1}" width="800" height="600" ${k===0&&eager?'':'loading="lazy"'} decoding="async">`).join("");
+  const dots=im.map((_,k)=>`<i class="${k?'':'on'}"></i>`).join("");
+  const arrows=im.length>1?`<button class="arr prev" type="button" aria-label="${T("prev")}">&#8249;</button><button class="arr next" type="button" aria-label="${T("next")}">&#8250;</button><div class="dots" aria-hidden="true">${dots}</div>`:"";
+  const specs=[];
+  specs.push(`<li>${T("type")}<b>${esc(typeName(p))}</b></li>`);
+  if(p.size) specs.push(`<li>${T("size")}<b>${esc(p.size.replace("Sqft","SF"))}</b></li>`);
+  if(p.lot) specs.push(`<li>${T("lot")}<b>${esc(p.lot.replace("Sqft","SF"))}</b></li>`);
+  if(p.zoning) specs.push(`<li>${T("zoning")}<b>${esc(p.zoning)}</b></li>`);
+  if(p.bldg) specs.push(`<li>${T("bldg")}<b>${esc(p.bldg)}</b></li>`);
+  return `<article class="card${i<6?' big':''}" data-id="${p.id}">
+   <div class="car"><span class="badge ${p.sale?'sale':''}">${p.sale?T("forSale"):T("forLease")}</span><div class="track" tabindex="0" role="group" aria-label="${esc(p.name)}">${slides}</div>${arrows}</div>
+   <div class="cb"><div class="price">${priceHTML(p)}</div><h3>${esc(p.name)}</h3><div class="loc">${esc(p.addr)}, ${esc(p.city)} &middot; ${esc(p.zone)}</div>
+   <ul class="spec">${specs.join("")}</ul><p class="blurb">${esc(p.blurb)}</p>
+   <div class="acts"><a class="btn btn-p" href="${mail(p)}">${T("inquire")}</a><a class="link2" href="${p.url}" target="_blank" rel="noopener">${T("view")}</a></div></div></article>`;
+}
+function renderCatalog(){
+  let l=DATA.filter(p=>(state.f==="all"||(state.f==="sale")===p.sale)&&(state.zone==="all"||p.zone===state.zone));
+  l=sorted(l);
+  document.getElementById("grid").innerHTML=l.map(cardHTML).join("");
+  document.getElementById("empty").style.display=l.length?"none":"block";
+  document.getElementById("count").textContent=`${T("show")} ${l.length} ${l.length===1?T("listing"):T("listings")}`;
+  bindCarousels();
+}
+function bindCarousels(){
+  document.querySelectorAll(".car").forEach(c=>{
+    const t=c.querySelector(".track"), dots=[...c.querySelectorAll(".dots i")];
+    const go=d=>{const w=t.clientWidth;const n=t.children.length;let i=Math.round(t.scrollLeft/w)+d;i=(i+n)%n;t.scrollTo({left:i*w,behavior:"smooth"})};
+    c.querySelector(".prev")?.addEventListener("click",()=>go(-1));
+    c.querySelector(".next")?.addEventListener("click",()=>go(1));
+    t.addEventListener("scroll",()=>{const i=Math.round(t.scrollLeft/t.clientWidth);dots.forEach((d,k)=>d.classList.toggle("on",k===i))},{passive:true});
+    t.addEventListener("keydown",e=>{if(e.key==="ArrowRight")go(1);if(e.key==="ArrowLeft")go(-1)});
+  });
+}
+function renderZoneSel(){
+  const zs=[...new Set(DATA.map(p=>p.zone))].sort();
+  const sel=document.getElementById("zoneSel");
+  sel.innerHTML=`<option value="all">${T("allAreas")}</option>`+zs.map(z=>`<option value="${esc(z)}">${esc(z)} (${DATA.filter(p=>p.zone===z).length})</option>`).join("");
+  sel.value=state.zone;
+}
+function renderZones(){
+  document.getElementById("zoneRows").innerHTML=ZONES.map(z=>{
+    const n=DATA.filter(p=>p.zone===z).length;
+    return `<div class="zrow"><a class="n" href="https://chariff.com/chariff-neighborhood/" target="_blank" rel="noopener">${esc(z)}</a>${n?`<button type="button" data-z="${esc(z)}">${n} ${n===1?T("listing"):T("listings")}</button>`:""}</div>`;
+  }).join("");
+  document.querySelectorAll("#zoneRows button").forEach(b=>b.addEventListener("click",()=>{state.zone=b.dataset.z;document.getElementById("zoneSel").value=state.zone;renderCatalog();document.getElementById("catalog").scrollIntoView({behavior:"smooth"})}));
+}
+function renderFeat(){
+  const top=sorted(DATA.filter(p=>p.sale)).slice(0,6);
+  const l=[...DATA.filter(p=>p.sale)].sort((x,y)=>y.key-x.key).slice(0,6);
+  document.getElementById("featTrack").innerHTML=l.map((p,i)=>`<a class="fcard" href="${p.url}" target="_blank" rel="noopener"><div class="ph"><img src="assets/p/${p.id}-1.webp" alt="${esc(p.name)}" width="800" height="600" ${i<2?'':'loading="lazy"'}></div><span class="tag">${T("forSale")}</span><div class="meta"><div><h3>${esc(p.name)}</h3><small>${esc(p.addr)}, ${esc(p.city)} &middot; ${esc(p.zone)}</small></div><div class="pr">${esc(p.price)}</div></div></a>`).join("");
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(e=>{const v=I18N[lang][e.dataset.i18n];if(v!==undefined)e.textContent=v});
+  document.querySelectorAll("[data-i18n-html]").forEach(e=>{const v=I18N[lang][e.dataset.i18nHtml];if(v!==undefined)e.textContent=v});
+  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.lang===lang)));
+  const sel=document.getElementById("sortSel");[...sel.options].forEach(o=>o.textContent=T(o.dataset.i18n));
+  document.title=lang==="es"?"Chariff Realty Group | Bienes raíces comerciales en Miami":"Chariff Realty Group | Commercial Real Estate in Miami";
+  renderZoneSel();renderZones();renderFeat();renderCatalog();setupScroll();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>{lang=b.dataset.lang;try{localStorage.setItem("chariff_lang",lang)}catch(e){}applyLang()}));
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{state.f=c.dataset.f;document.querySelectorAll(".chip").forEach(x=>x.setAttribute("aria-pressed",String(x===c)));renderCatalog()}));
+document.getElementById("zoneSel").addEventListener("change",e=>{state.zone=e.target.value;renderCatalog()});
+document.getElementById("sortSel").addEventListener("change",e=>{state.sort=e.target.value;renderCatalog()});
+
+/* header */
+const hdr=document.getElementById("hdr");
+const onS=()=>hdr.classList.toggle("solid",scrollY>40);addEventListener("scroll",onS,{passive:true});onS();
+
+/* hero slideshow */
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const sl=[...document.querySelectorAll(".hero .slides img")];let si=0;
+if(!reduce){setInterval(()=>{sl[si].classList.remove("on");si=(si+1)%sl.length;sl[si].classList.add("on")},5500)}
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+
+/* horizontal pinned scroll on desktop */
+let mm;
+function setupScroll(){
+  if(!window.gsap||!window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
+  if(mm) mm.revert();
+  mm=gsap.matchMedia();
+  mm.add("(min-width: 900px) and (prefers-reduced-motion: no-preference)",()=>{
+    const track=document.getElementById("featTrack");
+    const dist=()=>Math.max(0,track.scrollWidth-innerWidth);
+    gsap.to(track,{x:()=>-dist(),ease:"none",scrollTrigger:{trigger:"#featured",start:"top top",end:()=>"+="+dist(),pin:true,scrub:.6,invalidateOnRefresh:true,anticipatePin:1}});
+  });
+}
+applyLang();
+addEventListener("load",()=>window.ScrollTrigger&&ScrollTrigger.refresh());
+</script>
+</body>
+</html>
