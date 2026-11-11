@@ -136,8 +136,6 @@ header:not(.solid) .nav .logo img{opacity:0}
 .blurb{font-size:14px;color:#c9cec8}
 .acts{margin-top:auto;display:flex;flex-direction:column;gap:10px;padding-top:6px}
 .acts .btn{width:100%}
-.link2{text-align:center;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);text-decoration:underline;text-underline-offset:5px;min-height:44px;display:flex;align-items:center;justify-content:center}
-.link2:hover{color:var(--brand)}
 .empty{padding:60px 0;color:var(--muted);text-align:center;display:none}
 .note{margin-top:34px;color:var(--muted);font-size:13px}
 .note a{color:var(--text)}
@@ -326,7 +324,7 @@ const I18N = {
   sv1:"Commercial Sales",sv2:"Commercial Leasing",sv3:"Residential Sales",
   c_eye:"Contact",c_h:"Let's cut to the chase.",c_phone:"Phone",c_addr:"Office",c_social:"Social",
   f_orig:"Original site: chariff.com",f_disc:"All property data has been obtained from sources believed reliable. Chariff Realty Group, Inc. has not verified it and makes no guarantee, warranty or representation about it. Any reference to age or square footage must be verified and is not guaranteed.",fab:"Call now",
-  forSale:"For sale",forLease:"For lease",inquire:"Inquire by email",view:"View full listing",size:"Size",lot:"Lot",zoning:"Zoning",type:"Type",bldg:"Building",
+  forSale:"For sale",forLease:"For lease",inquire:"Inquire by email",size:"Size",lot:"Lot",zoning:"Zoning",type:"Type",bldg:"Building",
   listings:"listings",listing:"listing",show:"Showing",allAreas:"All areas",prev:"Previous photo",next:"Next photo",photo:"Photo",
   mail_s:"Inquiry: ",mail_b:(n,a)=>`Hello, I'm interested in ${n} (${a}). Could you share more information?`,filterZ:"Filter listings",monthly:"Monthly",
   types:{}},
@@ -342,7 +340,7 @@ const I18N = {
   sv1:"Ventas comerciales",sv2:"Arriendos comerciales",sv3:"Ventas residenciales",
   c_eye:"Contacto",c_h:"Vamos directo al grano.",c_phone:"Teléfono",c_addr:"Oficina",c_social:"Redes",
   f_orig:"Sitio original: chariff.com",f_disc:"Todos los datos de las propiedades provienen de fuentes consideradas confiables. Chariff Realty Group, Inc. no los ha verificado ni ofrece garantía alguna sobre ellos. Cualquier referencia a antigüedad o superficie debe verificarse y no está garantizada.",fab:"Llamar",
-  forSale:"En venta",forLease:"En arriendo",inquire:"Consultar por correo",view:"Ver ficha completa",size:"Tamaño",lot:"Terreno",zoning:"Zonificación",type:"Tipo",bldg:"Edificio",
+  forSale:"En venta",forLease:"En arriendo",inquire:"Consultar por correo",size:"Tamaño",lot:"Terreno",zoning:"Zonificación",type:"Tipo",bldg:"Edificio",
   listings:"propiedades",listing:"propiedad",show:"Mostrando",allAreas:"Todas las zonas",prev:"Foto anterior",next:"Foto siguiente",photo:"Foto",
   mail_s:"Consulta: ",mail_b:(n,a)=>`Hola, me interesa ${n} (${a}). ¿Podrían compartir más información?`,filterZ:"Filtrar propiedades",monthly:"Mensual",
   types:{"Office":"Oficina","Retail":"Comercial","Restaurant":"Restaurante","Development Site":"Terreno de desarrollo","Special Purpose":"Uso especial","Investment":"Inversión","Retail/Office":"Comercial/Oficina","Office/Retail":"Oficina/Comercial","Office/Warehouse":"Oficina/Bodega","Flex":"Flex","Warehouse":"Bodega"}}
@@ -381,7 +379,7 @@ function cardHTML(p,i){
    <div class="car"><span class="badge ${p.sale?'sale':''}">${p.sale?T("forSale"):T("forLease")}</span><div class="track" tabindex="0" role="group" aria-label="${esc(p.name)}">${slides}</div>${arrows}</div>
    <div class="cb"><div class="price">${priceHTML(p)}</div><h3>${esc(p.name)}</h3><div class="loc">${esc(p.addr)}, ${esc(p.city)} &middot; ${esc(p.zone)}</div>
    <ul class="spec">${specs.join("")}</ul><p class="blurb">${esc(p.blurb)}</p>
-   <div class="acts"><a class="btn btn-p" href="${mail(p)}">${T("inquire")}</a><a class="link2" href="${p.url}" target="_blank" rel="noopener">${T("view")}</a></div></div></article>`;
+   <div class="acts"><a class="btn btn-p" href="${mail(p)}">${T("inquire")}</a></div></div></article>`;
 }
 function renderCatalog(){
   let l=DATA.filter(p=>(state.f==="all"||(state.f==="sale")===p.sale)&&(state.zone==="all"||p.zone===state.zone));
